@@ -150,7 +150,7 @@ public class DigitalTrie extends mainClass {
 			item = scan.nextLine();
 
 			while (!item.equals("Exit me")) {
-				System.out.println((search(item)) ? "found" : "not found");
+				System.out.println((search(item)) ? "Found! Enter 'Exit me' to abort Item checking" : "Not found! Enter 'Exit me' to abort Item checking");
 				item = scan.nextLine();
 			}
 			// System.exit(0);
@@ -161,6 +161,7 @@ public class DigitalTrie extends mainClass {
 			item = scan.nextLine();
 			while (!item.equals("Exit me")) {
 				insert(item);
+				System.out.println("Inserted! Enter 'Exit me' to abort Item insertion");
 				item = scan.nextLine();
 			}
 			// System.exit(0);
@@ -170,7 +171,8 @@ public class DigitalTrie extends mainClass {
 		case "3":
 			item = scan.nextLine();
 			while (!item.equals("Exit me")) {
-				delete(item.toString());
+				delete(item/*.toString()*/);
+				System.out.println("Deleted! Enter 'Exit me' to abort Item deletion");
 				item = scan.nextLine();
 			}
 			// System.exit(0);
