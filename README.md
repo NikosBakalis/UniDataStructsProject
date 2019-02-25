@@ -11,6 +11,6 @@ University Project based on Data Structures.
    - Binary Search
    - Interpolation Search
 3) Tries
-   - Red Black Trie
+   - Red Black Tree
    - Digital Trie
 ~~~
