@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class DigitalTrie extends mainClass {
 
+	mainClass mc = new mainClass();
+
 	private TrieNode root;
 
 	public DigitalTrie() {
@@ -123,11 +125,15 @@ public class DigitalTrie extends mainClass {
 		return t;
 	}
 
+
+
 	@SuppressWarnings("resource")
-	public void CUI() {
+	String item = "";
+
+	public void CUI() throws Exception{
 		Scanner scan = new Scanner(System.in);
 
-		String item = "";
+
 
 		// while (!item.equals("Exit me")) {
 		System.out.println("\n\nDigital Trie Menu!");
@@ -144,7 +150,11 @@ public class DigitalTrie extends mainClass {
 			System.out.println("");
 			System.out.println("Now you abort Digital Trie!");
 			//item = scan.nextLine();
-			return;
+			//return;
+			//break;
+			String[] arguments = new String[] {""};
+			mc.main(arguments);
+			break;
 
 		case "1":
 			item = scan.nextLine();
@@ -181,6 +191,7 @@ public class DigitalTrie extends mainClass {
 
 		default:
 			System.out.println("Invalid input");
+			CUI();
 			break;
 		}
 		scan.close();
